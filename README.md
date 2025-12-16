@@ -9,7 +9,7 @@
 
 ## 📖 项目简介
 
-本项目演示了如何在有限算力（Google Colab T4）下，通过 **Unsloth** 对 Llama-3 进行极速微调，注入私有知识，并最终在本地 Windows/Linux 环境通过 **Docker + Ollama** 进行离线部署。
+本项目演示了如何在有限算力（T4）下，通过 **Unsloth** 对 Llama-3 进行极速微调，注入私有知识，并最终在本地 Windows/Linux 环境通过 **Docker + Ollama** 进行离线部署。
 
 ## 📂 目录结构
 
