@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  # ---------------------------------------------------
+  # 后端核心: Ollama API Service
+  # ---------------------------------------------------
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: always
+    ports:
+      - "11434:11434"
+    volumes:
+      # 持久化模型存储
+      - ./ollama_storage:/root/.ollama
+      # 映射本地 GGUF 模型文件
+      - ./local_models:/root/local_models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  # ---------------------------------------------------
+  # 前端界面: Open WebUI (ChatGPT-like Interface)
+  # ---------------------------------------------------
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    restart: always
+    ports:
+      - "3000:8080"
+    volumes:
+      # 持久化聊天记录和用户设置
+      - ./webui_storage:/app/backend/data
+    environment:
+      # 自动连接同网络下的 ollama 服务
+      - OLLAMA_BASE_URL=http://ollama:11434
+    depends_on:
+      - ollama

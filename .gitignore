@@ -1,0 +1,27 @@
+# Python / Colab 缓存
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 敏感信息
+.env
+api_keys.txt
+secrets.json
+
+# AI 大模型文件 (必须过滤，否则无法上传 GitHub)
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+outputs/
+wandb/
+
+# 数据集 (保护隐私)
+*.jsonl
+*.txt
+!data/sample.jsonl  # 保留样例
+
+# IDE 配置文件
+.vscode/
+.idea/
