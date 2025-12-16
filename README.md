@@ -18,8 +18,7 @@
 │   ├── docker-compose.yml  # 一键部署脚本
 │   └── local_models/       # [关键] 在这里放入你的 GGUF 模型文件
 ├── src/
-│   ├── data_factory.py     # 数据合成脚本
-│   └── train_lora.ipynb    # 训练笔记本
+│   └── Pocket-Mind.ipynb   # 训练笔记本
 └── requirements.txt
 ```
 
@@ -44,4 +43,3 @@ docker-compose up -d
    - 基础模型路径填: `/root/local_models/unsloth.Q4_K_M.gguf`
 
 ---
-*Created by Project Pocket Mind Team*
