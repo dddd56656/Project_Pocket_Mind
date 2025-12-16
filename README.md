@@ -42,4 +42,5 @@ docker-compose up -d
 2. 在设置中导入模型：
    - 基础模型路径填: `/root/local_models/unsloth.Q4_K_M.gguf`
 
+ps: 如果有其它模型，直接在dockerfile挂载的文件夹中直接放入即可，放入后到ui界面进行导入
 ---
