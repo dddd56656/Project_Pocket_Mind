@@ -1,0 +1,4 @@
+FROM qwen1_5-1_8b-chat-q2_k.gguf
+
+# 可选：可以添加系统提示词等其他指令
+# SYSTEM You are a helpful and friendly assistant.

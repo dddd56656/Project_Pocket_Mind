@@ -2,12 +2,12 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-
+ollama_storage
 # 敏感信息
 .env
 api_keys.txt
 secrets.json
-
+webui_storage
 # AI 大模型文件 (必须过滤，否则无法上传 GitHub)
 *.gguf
 *.safetensors

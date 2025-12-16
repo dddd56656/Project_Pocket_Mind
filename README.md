@@ -33,6 +33,9 @@
 ```bash
 cd deploy
 docker-compose up -d
+docker exec -it ollama /bin/bash
+ollama create qwen-q2k -f local_models/Modelfile
+
 ```
 
 ### 3. 开始对话
@@ -42,5 +45,5 @@ docker-compose up -d
 2. 在设置中导入模型：
    - 基础模型路径填: `/root/local_models/unsloth.Q4_K_M.gguf`
 
-ps: 如果有其它模型，直接在dockerfile挂载的文件夹中直接放入即可，放入后到ui界面进行导入
+ps: 如果有其它模型，直接在dockerfile挂载的文件夹中直接放入并修改Modelfile，进入容器执行create命令，之后到ui界面进行导入
 ---
